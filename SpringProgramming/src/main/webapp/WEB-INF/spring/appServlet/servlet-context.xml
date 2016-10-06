@@ -25,6 +25,32 @@
 	<context:component-scan base-package="com.mycompany.myapp" />   <!-- base-package 위에 있는 controller는 찾지 못함. --> 
 	<!-- controller가 component이기때문에 component를 찾는 기능을 해주는 코드 -->
 	
+	<!-- A를 관리 객체로 생성 -->
+	<beans:bean name="aObj" class="com.mycompany.myapp.exam09.A"/>   <!-- bean태그는 스프링관리객체로 생성한느 역할을 함 -->
 	
+	<!-- B를 관리 객체로 생성 -->
+	<beans:bean name="bObj" class="com.mycompany.myapp.exam09.B"/>  
 	
+	<!-- ServiceA를 관리 객체로 생성 -->
+	<beans:bean name="saObj" class="com.mycompany.myapp.exam09.ServiceA"/>
+	
+	<!-- ServiceB를 관리 객체로 생성 -->
+	<beans:bean name="sbObj" class="com.mycompany.myapp.exam09.ServiceB"/>
+	
+	<!-- ServiceC를 관리 객체로 생성 -->
+	<beans:bean name="scIObj" class="com.mycompany.myapp.exam09.ServiceCImple1"/>
+	
+	<!-- ServiceD를 관리 객체로 생성 -->
+	<beans:bean name="sdIObj" class="com.mycompany.myapp.exam09.ServiceCImple2"/>
+	
+	<!-- Exam09Controller 객체를 찾아서 가져오기 -->
+	<beans:bean name="exam09Controller" class="com.mycompany.myapp.exam09.Exam09Controller">
+		<!-- Setter 주입 -->
+		<beans:property name="a" ref="aObj"/>   <!--name=setter의 이름, ref=관리객체의 이름(의존객체의 이름) -->
+		<beans:property name="b" ref="bObj"/>
+		<beans:property name="sa" ref="saObj"/>
+		<beans:property name="sb" ref="sbObj"/>
+		<beans:property name="sc" ref="scIObj"/>
+		<beans:property name="sd" ref="sdIObj"/>
+	</beans:bean>
 </beans:beans>
