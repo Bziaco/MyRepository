@@ -8,6 +8,7 @@
 	<body>
 		Exam08
 		<hr/>
-		1) <a href="/myapp/exam09/method1">XML설정 파일(servlet-context.xml)을 이용</a> <br/>
+		1) <a href="/myapp/exam09/method1">XML설정 파일(servlet-context.xml): setter 주입</a> <br/>
+		2) <a href="/myapp/exam09/method2">XML설정 파일(servlet-context.xml): Constructor 주입</a> <br/>
 	</body>
 </html>

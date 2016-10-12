@@ -46,7 +46,6 @@
 		      <button>가입</button>
 		       --%>
 		       
-		      <input type="image" src="/myapp/resources/image/join.png" width="100"/>
 		</form>
 	</body>
 </html>
