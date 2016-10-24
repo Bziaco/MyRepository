@@ -1,0 +1,106 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AE59FDD6-8F2E-9F42-19B7-98F3FD56A806" name="board">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-20 05:19:35 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+<ordsAlias>table_4</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="bno" id="B7EB744D-0BA9-6F14-5F23-30CF89A45577">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-20 05:25:45 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="btitle" id="BA625786-7CC6-3BF9-465A-848A0C518D0F">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-20 05:26:52 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="bcontent" id="F6DA3B2F-8584-A73A-77BD-8DAD25B6A48B">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-20 05:26:52 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>4000</dataTypeSize>
+<ownDataTypeParameters>4000,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="bwriter" id="8E96C9A6-30B6-92B3-2EC0-E6C77FA35ED3">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-20 05:36:06 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A1ED0634-40D5-3AA7-DE3F-EB82F8E01A48" referredColumn="9E888045-D3CF-50E9-9F32-7BFC542FFD0A"/>
+</associations>
+</Column>
+<Column name="bhitcount" id="CE22591B-4F97-EB89-88D3-9E51593EC004">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-20 05:43:20 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="bdate" id="66A86DB4-17C0-8D1D-14DE-8986A85A0B9B">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-20 05:43:20 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A62010F1-25D0-9E6A-8ED5-F21F588D5B61" name="PK_board_bno">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-20 05:27:31 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B7EB744D-0BA9-6F14-5F23-30CF89A45577"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="740C8305-5338-3047-3A97-924431BFF576" name="FK_board_writer">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-20 05:36:06 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8E96C9A6-30B6-92B3-2EC0-E6C77FA35ED3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
