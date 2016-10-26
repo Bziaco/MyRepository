@@ -65,9 +65,13 @@ public class MemberService {
 		if(member.getMpassword().equals(mpassword) == false) return null;
 		return member;
 	}
-	/*public int modify(Member member){
-		
-	}*/
+	public int modify(Member member, HttpSession session){
+		String mid = (String) session.getAttribute("login");
+		member = memberDao.selectByMid(mid);
+		if(member.getMid().equals(mid) == false){ return MODIFY_FAIL; }
+		memberDao.update(member);
+		return MODIFY_SUCCESS;
+	}
 	public int withdraw(String mpassword, HttpSession session){
 		String mid = (String) session.getAttribute("login");
 		Member member = memberDao.selectByMid(mid);
@@ -76,5 +80,9 @@ public class MemberService {
 		logout(session);
 		return WITHDRAW_SUCCESS;
 	}
-	/*public boolean isMid(String mid){}*/
+	public boolean isMid(String mid){
+		Member member = memberDao.selectByMid(mid);
+		if(member.getMid().equals(mid) == true){ return false; }
+		return true;
+	}
 }
