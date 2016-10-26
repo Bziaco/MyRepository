@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="JOB_HISTORY" directorySegmentName="seg_0" id="56F1CD3F-B7FB-F111-62A0-6BAA407AFAB9">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 00:25:45 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+<schemaObject>FFA5AAD1-B6D1-48EC-7FE9-8AD352DDA7AB</schemaObject>
+<logging>NO</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>73EF05EB-D964-FD50-A9E6-61A355F847A7</segment>
+<tableSpace>0664A6D7-D3AE-8DDB-26AC-6D1CE3901D61</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="DEPARTMENT_ID" id="3FF6F7C0-D12B-1B4F-B109-ABD3D58C0802">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 00:25:45 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="END_DATE" id="4A25400F-8AD0-8E30-FBDD-D5E83AC0636A">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 00:25:45 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="START_DATE" id="8AA62AF8-635F-3C64-510F-78110BDA91F1">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 00:25:45 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="JOB_ID" id="C5802084-B434-8499-1FBB-DE82C7B4E81E">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 00:25:45 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="EMPLOYEE_ID" id="FED0B319-68E0-F4E6-D797-60A5289CA103">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 00:25:45 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<indexProxies>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="JHIST_DEPARTMENT_IX" id="653E78CE-71CD-8F8A-4BC6-F993545563F0">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 00:25:45 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+<schemaObject>FFA5AAD1-B6D1-48EC-7FE9-8AD352DDA7AB</schemaObject>
+<logging>NO</logging>
+<segment>F0523E43-4663-C90E-35B5-5617119DDC64</segment>
+<tableSpace>0664A6D7-D3AE-8DDB-26AC-6D1CE3901D61</tableSpace>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="JHIST_JOB_IX" id="69647F68-8D28-6957-CFBC-C249E6789728">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 00:25:45 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+<schemaObject>FFA5AAD1-B6D1-48EC-7FE9-8AD352DDA7AB</schemaObject>
+<logging>NO</logging>
+<segment>F0523E43-4663-C90E-35B5-5617119DDC64</segment>
+<tableSpace>0664A6D7-D3AE-8DDB-26AC-6D1CE3901D61</tableSpace>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="JHIST_EMPLOYEE_IX" id="744DDC05-313C-2BA1-72B5-0A4DAF97BAF7">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 00:25:45 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+<schemaObject>FFA5AAD1-B6D1-48EC-7FE9-8AD352DDA7AB</schemaObject>
+<logging>NO</logging>
+<segment>F0523E43-4663-C90E-35B5-5617119DDC64</segment>
+<tableSpace>0664A6D7-D3AE-8DDB-26AC-6D1CE3901D61</tableSpace>
+</IndexProxy>
+<IndexProxy class="oracle.dbtools.crest.model.design.storage.oracle.v10g.IndexProxyOraclev10g" name="JHIST_EMP_ID_ST_DATE_PK" id="C8A51D4C-F294-44CD-C292-C9B0E25E60D8">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 00:25:45 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+<schemaObject>FFA5AAD1-B6D1-48EC-7FE9-8AD352DDA7AB</schemaObject>
+<logging>NO</logging>
+<segment>F0523E43-4663-C90E-35B5-5617119DDC64</segment>
+<tableSpace>0664A6D7-D3AE-8DDB-26AC-6D1CE3901D61</tableSpace>
+</IndexProxy>
+</indexProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="JHIST_EMP_ID_ST_DATE_PK" id="3ABB9EC6-6421-E180-405E-1C841EEFD5CC">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 00:25:45 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+<logging>NO</logging>
+<segment>F0523E43-4663-C90E-35B5-5617119DDC64</segment>
+<tableSpace>0664A6D7-D3AE-8DDB-26AC-6D1CE3901D61</tableSpace>
+<existingIndex>C8A51D4C-F294-44CD-C292-C9B0E25E60D8</existingIndex>
+<indexSegment>F0523E43-4663-C90E-35B5-5617119DDC64</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+<tableCheckConstraints itemClass="oracle.dbtools.crest.model.design.storage.oracle.TableCheckConstraintOracle">
+<TableCheckConstraint name="JHIST_DATE_INTERVAL" id="4AEBF9D8-B3B7-0D2A-6536-230ACF39DEBA">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 00:25:45 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+</TableCheckConstraint>
+</tableCheckConstraints>
+</TableProxyOraclev11g>

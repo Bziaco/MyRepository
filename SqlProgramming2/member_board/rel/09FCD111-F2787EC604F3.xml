@@ -3,6 +3,21 @@
 <createdBy>Administrator</createdBy>
 <createdTime>2016-10-20 05:17:20 UTC</createdTime>
 <ownerDesignName>member_board</ownerDesignName>
-<shouldBeOpen>false</shouldBeOpen>
+<shouldBeOpen>true</shouldBeOpen>
 <selectedRDBMSSite>32076570-2523-435C-2E92-BF29817DFF70</selectedRDBMSSite>
+<redirectConnectionStamp class="oracle.dbtools.crest.imports.DBConnectionStamp">
+<connName>localhost_orcl_tester1</connName>
+<connUrl>jdbc:oracle:thin:@localhost:1521:orcl</connUrl>
+<connUser>tester1</connUser>
+<connType>1</connType>
+<syncSelected>-1</syncSelected>
+</redirectConnectionStamp>
+<importConnectionStamps>
+<importConnectionStamp class="oracle.dbtools.crest.imports.DBConnectionStamp">
+<connName>localhost_orcl_hr</connName>
+<connUrl>jdbc:oracle:thin:@localhost:1521:orcl</connUrl>
+<connUser>HR</connUser>
+<connType>1</connType>
+</importConnectionStamp>
+</importConnectionStamps>
 </relationalModel>

@@ -1,3 +1,12 @@
+create table member(
+  mid varchar(10) not null,
+  mname varchar(10) not null,
+  mpassword varchar(10) ,
+  mage number(3) ,
+  mbirth date not null
+);
+
+
 --Section01 서브쿼리의 기본 개념
 --테이블간의 데이터를 연결
 --이문세 사원의 부서 이름은?

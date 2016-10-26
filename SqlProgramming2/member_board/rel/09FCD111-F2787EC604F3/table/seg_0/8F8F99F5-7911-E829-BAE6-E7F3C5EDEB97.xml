@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8F8F99F5-7911-E829-BAE6-E7F3C5EDEB97" schemaObject="FFA5AAD1-B6D1-48EC-7FE9-8AD352DDA7AB" name="REGIONS">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>REGIONS</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 00:26:24 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="REGION_ID" id="7C8D99D9-3FD4-EFEA-1556-4AFCB730B848">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>REGIONS</sourceObjSchema>
+<sourceObjName>REGION_ID</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 00:26:24 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<notNullConstraintName>REGION_ID_NN</notNullConstraintName>
+</Column>
+<Column name="REGION_NAME" id="F361F8BC-BC64-4A58-C2D3-82710F7F9758">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>REGIONS</sourceObjSchema>
+<sourceObjName>REGION_NAME</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 00:26:24 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 BYTE</dataTypeSize>
+<ownDataTypeParameters>25 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D94A84EC-F661-73CF-D863-FF66F891A8F1" name="REG_ID_PK">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>REG_ID_PK</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 00:26:25 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7C8D99D9-3FD4-EFEA-1556-4AFCB730B848"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B268EF6A-E387-BC37-7BBD-167F1883ACED" schemaObject="FFA5AAD1-B6D1-48EC-7FE9-8AD352DDA7AB" name="REG_ID_PK">
+<sourceConnName>localhost_orcl_hr</sourceConnName>
+<sourceObjSchema>HR</sourceObjSchema>
+<sourceObjName>REG_ID_PK</sourceObjName>
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-21 00:26:24 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7C8D99D9-3FD4-EFEA-1556-4AFCB730B848"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

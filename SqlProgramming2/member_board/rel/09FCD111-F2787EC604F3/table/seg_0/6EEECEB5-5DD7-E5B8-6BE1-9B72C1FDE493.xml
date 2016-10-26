@@ -53,6 +53,17 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="mpassword" id="C407E435-72BC-9969-FF97-DCCBC050D595">
+<createdBy>Administrator</createdBy>
+<createdTime>2016-10-20 06:19:49 UTC</createdTime>
+<ownerDesignName>member_board</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="4DE159AB-9AE5-A9CA-4E1B-F1F205759870" name="PK_member_mid">

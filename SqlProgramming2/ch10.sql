@@ -70,3 +70,54 @@ inner join departments d on e.department_id=d.department_id
 inner join locations l on d.location_id=l.location_id
 inner join countries c on l.country_id=c.country_id
 where employee_id=101;
+
+--Section04 Self  Join(==inner join_)
+--101번 사원의 관리자 이름은?
+select e2.first_name
+from employees e1, employees e2
+where e1.manager_id=e2.employee_id
+and e1.employee_id=101;
+
+--5.3 ANSI Outer Join
+drop table lefttable;
+drop table righttable;
+
+create table member(
+  mid varchar(10) primary key,
+  mname varchar(10) not null
+);
+create table board(
+  bno number(5) primary key,
+  btitle varchar(100) not null,
+  bwriter varchar(10) references member(mid)
+);
+insert into member values('user1','사용자1');
+insert into member values('user2','사용자2');
+insert into member values('user3','사용자3');
+insert into member values('user4','사용자4');
+insert into member values('user5','사용자5');
+
+insert into board values(1,'제목1','user1');
+insert into board values(2,'제목2','user2');
+insert into board values(3,'제목3','user3');
+
+select mid, mname, bno, btitle
+from member
+left outer join board
+on member.mid=board.bwriter
+where bno is null;
+
+select bno, btitle, mid, mname
+from member
+right outer join board
+on member.mid=board.bwriter
+where bno is null;
+
+--left outter join
+select mid, mname, bno, btitle
+from member, board
+where member.mid=board.bwriter(+);    --존재하지 않으면 행을 하나 더 추가하되 널로 추가해라
+--right outter join
+select bno, btitle, mid, mname
+from board, member
+where member.mid(+)=board.bwriter;
