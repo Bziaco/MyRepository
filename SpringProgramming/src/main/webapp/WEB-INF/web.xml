@@ -31,4 +31,11 @@
 		<servlet-name>appServlet</servlet-name>
 		<url-pattern>/</url-pattern>  <!-- 클라이언트가 어떠한 요청을 해도 내가 동작을 하겠다 -->
 	</servlet-mapping>
+	
+<!-- 	<resource-ref>
+		 <description>Oracle Datasource</description>
+		 <res-ref-name>jdbc/orcl</res-ref-name>
+		 <res-type>javax.sql.DataSource</res-type>
+		 <res-auth>Container</res-auth>
+	</resource-ref> -->
 </web-app>

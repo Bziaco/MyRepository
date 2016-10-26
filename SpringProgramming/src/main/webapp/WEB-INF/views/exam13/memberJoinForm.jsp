@@ -6,10 +6,10 @@
 		<meta charset="UTF-8">
 	</head>
 	<body>
-		Exam12
+		Exam13
 		<hr/>
 		[회원가입] <br/>
-		<form method="post" action="/myapp/exam12/join">  <%--내가 POST방식으로 요청을 하겠다 --%>
+		<form method="post" action="/myapp/exam13/memberJoin">  <%--내가 POST방식으로 요청을 하겠다 --%>
 			아 이 디: <input type="text" name="mid" value="fall"/> <br/>   <%--name==mid라는 파라미터 값이 됨 --%>
 			이    름: <input type="text" name="mname" value="한가을"/> <br/>
 			비밀번호: <input type="password" name="mpassword" value="12345"> <br/>

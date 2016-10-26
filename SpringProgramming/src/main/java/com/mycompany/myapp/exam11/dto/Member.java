@@ -76,6 +76,10 @@ public class Member {
 	public void setMbirth(Date mbirth) {
 		this.mbirth = mbirth;
 	}
+	public Object getMage() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 	
