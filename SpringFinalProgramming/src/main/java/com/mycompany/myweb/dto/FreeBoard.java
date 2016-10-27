@@ -9,8 +9,8 @@ public class FreeBoard {
 	private String btitle;
 	private String bcontent;
 	private String bwriter;
-	private String bhitcount;
-	@DateTimeFormat(pattern="yyy-MM-dd")
+	private int bhitcount;
+	@DateTimeFormat(pattern="yyyy-MM-dd")
 	private Date bdate;
 	
 	public int getBno() {
@@ -37,10 +37,10 @@ public class FreeBoard {
 	public void setBwriter(String bwriter) {
 		this.bwriter = bwriter;
 	}
-	public String getBhitcount() {
+	public int getBhitcount() {
 		return bhitcount;
 	}
-	public void setBhitcount(String bhitcount) {
+	public void setBhitcount(int bhitcount) {
 		this.bhitcount = bhitcount;
 	}
 	public Date getBdate() {

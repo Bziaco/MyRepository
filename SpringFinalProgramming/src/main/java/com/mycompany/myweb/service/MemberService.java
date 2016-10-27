@@ -39,18 +39,20 @@ public class MemberService {
 		memberDao.insert(member);
 		return JOIN_SUCCESS;
 	}
-	public int login(String mid, String mpassword, HttpSession session){
+	public int login(String mid, String mpassword){
 		Member member = memberDao.selectByMid(mid);
 		if(member == null) {return LOGIN_FAIL_MID; }
 		if(member.getMpassword().equals(mpassword) == false){ return LOGIN_FAIL_MPASSWORD; }
-		session.setAttribute("login", mid);
+
 		return LOGIN_SUCCESS;
 	}
-	public int logout(HttpSession session){
-		session.removeAttribute("login");
+	//DB에 대한 정보를 지우기 위해 mid값을 받아온다
+	//로그인이 되어있는 mid를 알기위해 
+	public int logout(String mid){
 		return LOGOUT_SUCCESS;
 	}
 	public String findMPassword(String mid, String memail){
+		//selectByMid자체가 id가 있는지 없는지를 검사하는 것이기 때문에 member가 null이라면 id가 없다는 것
 		Member member = memberDao.selectByMid(mid);
 		if(member == null) return null;
 		if(member.getMemail().equals(memail) == false) return null;
@@ -59,30 +61,35 @@ public class MemberService {
 	public String findMid(String memail){
 		return memberDao.selectByMemail(memail);
 	}
-	public Member info(String mpassword, HttpSession session){
-		String mid = (String) session.getAttribute("login");
+	public Member info(String mid, String mpassword){
+		//String mid = (String) session.getAttribute("login");
 		Member member = memberDao.selectByMid(mid);
 		if(member.getMpassword().equals(mpassword) == false) return null;
 		return member;
 	}
 	public int modify(Member member, HttpSession session){
-		String mid = (String) session.getAttribute("login");
+		/*String mid = (String) session.getAttribute("login");
 		member = memberDao.selectByMid(mid);
 		if(member.getMid().equals(mid) == false){ return MODIFY_FAIL; }
 		memberDao.update(member);
+		return MODIFY_SUCCESS;*/
+		Member dbMember = memberDao.selectByMid(member.getMid());
+		if(dbMember.getMpassword().equals(member.getMpassword()) == false) { return MODIFY_FAIL; };
+		int row = memberDao.update(member);
+		if(row != 1){ return MODIFY_FAIL; }
 		return MODIFY_SUCCESS;
 	}
-	public int withdraw(String mpassword, HttpSession session){
-		String mid = (String) session.getAttribute("login");
+	public int withdraw(String mid, String mpassword){
 		Member member = memberDao.selectByMid(mid);
 		if(member.getMpassword().equals(mpassword) == false){ return WITHDRAW_FIAL; }
 		memberDao.delete(mid);
-		logout(session);
+		logout(mid);
 		return WITHDRAW_SUCCESS;
 	}
 	public boolean isMid(String mid){
 		Member member = memberDao.selectByMid(mid);
-		if(member.getMid().equals(mid) == true){ return false; }
+		//if(member.getMid().equals(mid) == true){ return false; }
+		if(member == null) return false; 
 		return true;
 	}
 }

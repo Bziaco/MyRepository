@@ -57,8 +57,8 @@ public class FreeBoardDao {
 				freeBoard.setBno(rs.getInt("bno"));
 				freeBoard.setBtitle(rs.getString("btitle"));
 				freeBoard.setBcontent(rs.getString("bcontent"));
-				freeBoard.setBwriter(rs.getString("bwrite"));
-				freeBoard.setBhitcount(rs.getString("bhitcount"));
+				freeBoard.setBwriter(rs.getString("bwriter"));
+				freeBoard.setBhitcount(rs.getInt("bhitcount"));
 				freeBoard.setBdate(rs.getDate("bdate"));
 				return freeBoard;
 			}
@@ -86,8 +86,8 @@ public class FreeBoardDao {
 						FreeBoard freeBoard = new FreeBoard();
 						freeBoard.setBno(rs.getInt("bno"));
 						freeBoard.setBtitle(rs.getString("btitle"));
-						freeBoard.setBwriter(rs.getString("bwrite"));
-						freeBoard.setBhitcount(rs.getString("bhitcount"));
+						freeBoard.setBwriter(rs.getString("bwriter"));
+						freeBoard.setBhitcount(rs.getInt("bhitcount"));
 						freeBoard.setBdate(rs.getDate("bdate"));
 						return freeBoard;
 					}

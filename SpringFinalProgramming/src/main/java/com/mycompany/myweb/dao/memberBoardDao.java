@@ -58,11 +58,11 @@ public class memberBoardDao {
 			public Member mapRow(ResultSet rs, int row) throws SQLException {
 				Member member = new Member();
 				member.setMid(rs.getString("mid"));
-				member.setMid(rs.getString("mname"));
-				member.setMid(rs.getString("mpassword"));
-				member.setMid(rs.getString("maddress"));
-				member.setMid(rs.getString("mtel"));
-				member.setMid(rs.getString("memail"));
+				member.setMname(rs.getString("mname"));
+				member.setMpassword(rs.getString("mpassword"));
+				member.setMaddress(rs.getString("maddress"));
+				member.setMtel(rs.getString("mtel"));
+				member.setMemail(rs.getString("memail"));
 				return member;
 			}
 		});

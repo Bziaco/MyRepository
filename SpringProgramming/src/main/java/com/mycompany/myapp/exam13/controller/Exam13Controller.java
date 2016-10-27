@@ -28,7 +28,7 @@ public class Exam13Controller {
 	@RequestMapping(value="/memberJoin", method=RequestMethod.GET)
 	public String memberJoinForm(){
 		logger.info("joinForm 처리");
-		return "exam13/memberjoinForm";
+		return "exam13/memberJoinForm";
 	}
 	
 	@RequestMapping(value="/memberJoin", method=RequestMethod.POST)
