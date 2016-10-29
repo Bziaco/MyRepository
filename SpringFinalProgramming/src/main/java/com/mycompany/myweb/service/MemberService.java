@@ -35,8 +35,8 @@ public class MemberService {
 	private memberBoardDao memberDao;
 
 	public int join(Member member){
-		if(member.getMid() == null){}
-		memberDao.insert(member);
+		if(member.getMid() == null)
+			memberDao.insert(member);
 		return JOIN_SUCCESS;
 	}
 	public int login(String mid, String mpassword){

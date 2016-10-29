@@ -10,7 +10,7 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-	
+		 <!-- Multipart/form-data 해석을 위한 스프링 관리 객체 설정 -->
 	<annotation-driven />    <!-- 이게 있어야 @을 사용할 수 있음 -->
 	<resources mapping="/resources/**" location="/resources/" />
 	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
@@ -32,4 +32,6 @@
 	 	<beans:property name="dataSource" ref="dataSource">
 	 	</beans:property>
 	 </beans:bean>
+
+	 <beans:bean name="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
 </beans:beans>

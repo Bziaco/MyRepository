@@ -78,7 +78,7 @@ public class MemberController {
 	public String logout(HttpSession session){
 		String mid = (String) session.getAttribute("login");
 		int result = memberService.logout(mid);
-		if(result == MemberService.LOGIN_SUCCESS){
+		if(result == MemberService.LOGOUT_SUCCESS){
 			session.removeAttribute("login");
 		}
 		return "redirect:/";

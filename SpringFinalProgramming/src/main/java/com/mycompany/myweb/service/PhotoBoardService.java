@@ -10,14 +10,14 @@ import com.mycompany.myweb.dto.PhotoBoard;
 
 @Component
 public class PhotoBoardService {
-	private static final int WRITE_SUCCESS = 0;
-	private static final int WRITE_FAIL = 1;
+	public static final int WRITE_SUCCESS = 0;
+	public static final int WRITE_FAIL = 1;
 	
-	private static final int MODIFY_SUCCESS = 0;
-	private static final int MODIFY_FAIL = 1;
+	public static final int MODIFY_SUCCESS = 0;
+	public static final int MODIFY_FAIL = 1;
 	
-	private static final int REMOVE_SUCCESS = 0;
-	private static final int REMOVE_FAIL = 1;
+	public static final int REMOVE_SUCCESS = 0;
+	public static final int REMOVE_FAIL = 1;
 	
 	@Autowired
 	private photoBoardDao photoboardDao;
@@ -26,12 +26,12 @@ public class PhotoBoardService {
 	public List<PhotoBoard> list(int pageNo, int rowsPerPage){
 		return photoboardDao.selectByPage(pageNo, rowsPerPage);
 	}
-	public int write(PhotoBoard PhotoBoard){
-		int row = photoboardDao.insert(PhotoBoard);
+	public int write(PhotoBoard photoBoard){
+		int row = photoboardDao.insert(photoBoard);
 		return WRITE_SUCCESS;
 	}
-	public int modify(PhotoBoard PhotoBoard){
-		int row = photoboardDao.update(PhotoBoard);
+	public int modify(PhotoBoard photoBoard){
+		int row = photoboardDao.update(photoBoard);
 		if(row == 0 ) { return WRITE_FAIL; }
 		return WRITE_SUCCESS;
 	}
@@ -42,5 +42,8 @@ public class PhotoBoardService {
 	}
 	public PhotoBoard info(int bno){
 		return photoboardDao.selectByBno(bno);
+	}
+	public int getCount(){
+		return photoboardDao.count();
 	}
 }
