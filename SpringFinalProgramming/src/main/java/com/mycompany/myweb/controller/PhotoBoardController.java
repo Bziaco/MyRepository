@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.net.URLEncoder;
 import java.util.Date;
 import java.util.List;
 
@@ -18,7 +17,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.mycompany.myweb.dto.FreeBoard;
 import com.mycompany.myweb.dto.PhotoBoard;
 import com.mycompany.myweb.service.PhotoBoardService;
 
@@ -95,7 +93,7 @@ public class PhotoBoardController {
 			String realpath = session.getServletContext().getRealPath("/WEB-INF/photo/" + savedfile);
 			photoBoard.getPhoto().transferTo(new File(realpath));
 			//
-			photoBoard.setSavedfile(savedfile);
+			photoBoard.setSavedfile(savedfile);     
 			//파일의 종류를 얻는 코드
 			photoBoard.setMimetype(photoBoard.getPhoto().getContentType());
 			
